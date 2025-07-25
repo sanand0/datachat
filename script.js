@@ -7,7 +7,7 @@ import { Marked } from "https://cdn.jsdelivr.net/npm/marked@13/+esm";
 import { markedHighlight } from "https://cdn.jsdelivr.net/npm/marked-highlight@2/+esm";
 import hljs from "https://cdn.jsdelivr.net/npm/highlight.js@11/+esm";
 import { Chart, registerables } from "https://cdn.jsdelivr.net/npm/chart.js@4/+esm";
-import { openaiConfig } from "https://cdn.jsdelivr.net/npm/bootstrap-llm-provider@1";
+import { openaiConfig } from "https://cdn.jsdelivr.net/npm/bootstrap-llm-provider@1.1";
 
 // Initialize SQLite
 const defaultDB = "@";
@@ -454,8 +454,8 @@ function notify(cls, title, message) {
 }
 
 async function llm({ system, user, schema }) {
-  const { baseURL, apiKey } = await openaiConfig();
-  const response = await fetch(`${baseURL}/chat/completions`, {
+  const { baseUrl, apiKey } = await openaiConfig();
+  const response = await fetch(`${baseUrl}/chat/completions`, {
     method: "POST",
     headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
     body: JSON.stringify({
