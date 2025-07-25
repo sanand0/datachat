@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "lint:oxlint": "npx -y oxlint --fix",
+    "lint:js-md": "npx -y prettier@3.6 --print-width 150 --write '**/*.js' '!**/*.min.js' '**/*.md'",
+    "lint:html": "npx -y js-beautify@1 '**/*.html' --type html --replace --indent-size 2 --max-preserve-newlines 1 --end-with-newline",
+    "lint": "npm run lint:js-md && npm run lint:html"
+  },
+  "prettier": {
+    "printWidth": 150
+  }
+}
