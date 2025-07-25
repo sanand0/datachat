@@ -457,7 +457,7 @@ async function llm({ system, user, schema }) {
   const { baseURL, apiKey } = await openaiConfig();
   const response = await fetch(`${baseURL}/chat/completions`, {
     method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}:datachat` },
+    headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
     body: JSON.stringify({
       model: "gpt-4o-mini",
       messages: [
