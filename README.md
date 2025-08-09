@@ -64,7 +64,7 @@ On this repository's [page settings](https://github.com/sanand0/datachat/setting
 
 - Frontend: Vanilla JavaScript with lit-html for rendering
 - Database: SQLite WASM for client-side data processing
-- LLM Integration: GPT-4o Mini through LLM Foundry API
+- LLM Integration: Through OpenAI compatible APIs
 - Styling: Bootstrap 5.3.7 with dark mode support
 
 ### Dependencies
